@@ -26,14 +26,15 @@ app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'Vad är Node.js?'
+        title: 'Vad är Node.js?',
+        description: 'Detta är en dynamisk beskriving från index.ejs filen',
     });
 });
 
 app.get('/service', (req, res) => {
     res.render('service', { 
         title: 'Vad är Express.js?',
-        description: 'Detta är en dynamisk beskriving från service-sidan' 
+        description: 'Detta är en dynamisk beskriving från service.ejs filen' 
     });
 });
 
