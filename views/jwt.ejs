@@ -1,0 +1,27 @@
+<%- include("template/header", {webtitle: 'JWT'})  %>
+
+<div class="container my-4 text-success">
+    
+    <h1><%= title %> <span style="font-size: 12px;">(title)</span></h1>
+
+    <p style="font-size: 12px;"><%= description %> (description)</p>
+    <hr > 
+
+    <p>JWT står för "JSON Web Token" och är en öppen standard (RFC 7519) som definierar ett kompakt och självständigt sätt att representera information mellan två parter i form av JSON-objekt. JWT används främst för att verifiera autenticitet och skicka information mellan en klient och en server, särskilt när det handlar om att bekräfta att en användare är behörig att komma åt vissa resurser eller funktioner i en webbapplikation.</p>
+
+    <p>JWT består av tre delar:</p>
+
+    <ol>
+        <li><b>Header (Huvud): </b>Innehåller metadata om tokenet, inklusive den använda algoritmen för att signera tokenet.</li>
+
+        <li><b>Payload (Nyttolast): </b> Innehåller den faktiska informationen som transporteras med tokenet. Det kan inkludera användarinformation, behörigheter eller annan användbar data.</li>
+
+        <li><b>Verify Signature (Signatur): </b> Används för att verifiera att tokenet inte har ändrats på vägen. Signaturen skapas genom att kryptera huvudet och nyttolasten med en hemlig nyckel, och den används för att säkerställa att tokenet är autentisk och inte manipulerat.</li>
+    </ol> 
+
+    <p>JWT används ofta för autentisering och auktorisering i webbapplikationer och API:er. När en användare loggar in och autentiseras, genereras ett JWT-token och skickas till klienten. Klienten sparar sedan detta token, och när den gör förfrågningar till API:et eller servern, inkluderar den tokenet i förfrågningen. Servern kan sedan verifiera tokenet genom att dekryptera och kontrollera signaturen och sedan ta beslut om att tillåta eller neka åtkomst till resurser baserat på informationen i tokenet.</p>
+
+    <p>JWT har flera fördelar, inklusive enkelhet, självständighet (eftersom tokenet innehåller all nödvändig information) och skapar en säker och standardiserad metod för att hantera autentisering och auktorisering. Det är därför vanligt i moderna webbapplikationer och API:er, särskilt när det handlar om att bygga säkra och skalbara system.</p>
+</div>
+
+<%- include("template/footer")  %>

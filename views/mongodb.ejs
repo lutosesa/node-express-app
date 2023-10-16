@@ -1,0 +1,29 @@
+<%- include("template/header", {webtitle: 'MongoDB'})  %>
+
+<div class="container my-4 text-success">
+    
+    <h1><%= title %> <span style="font-size: 12px;">(title)</span></h1>
+
+    <p style="font-size: 12px;"><%= description %> (description)</p>
+    <hr > 
+
+    <p>MongoDB är en populär och öppen källkods databashanteringsdatabas (DBMS) som används för att lagra och hantera data. MongoDB är en icke-relationell databas som tillhör kategorin NoSQL-databaser. Den är utformad för att hantera stora mängder data och gör det på ett flexibelt sätt som skiljer sig från traditionella relationsdatabaser.</p>
+
+    <p>Här är några viktiga egenskaper och koncept som är förknippade med MongoDB:</p>
+
+    <ol>
+        <li><b>Dokumentorienterad: </b> MongoDB lagrar data i form av dokument, vilket innebär att data grupperas tillsammans i en struktur som liknar JSON-objekt. Dessa dokument kan vara hierarkiska och innehålla olika fält. Dokumenten i en MongoDB-databas kallas "collections."</li>
+
+        <li><b>Schemaless: </b> MongoDB är schemalös, vilket innebär att du inte behöver definiera en fast struktur för dina data i förväg. Du kan enkelt lägga till eller ta bort fält från dina dokument utan att behöva ändra någon schema-definition.</li>
+
+        <li><b>Flexibel frågespråk: </b> MongoDB stöder ett kraftfullt frågespråk för att hämta och filtrera data, vilket kallas för Query Language. Du kan använda detta frågespråk för att söka efter data baserat på kriterier och villkor.</li>
+
+        <li><b>Horisontell skalbarhet: </b> MongoDB är utformat för att vara skalbart, och det kan hantera stora datamängder genom att fördela data över flera servrar. Det är särskilt användbart för applikationer som kräver hög tillgänglighet och prestanda.</li>
+
+         <li><b>Indexering: </b> MongoDB stöder indexering av data för att förbättra sökningar och frågeprestanda. Du kan skapa olika typer av index för att anpassa din databas till specifika användningsfall.</li>
+    </ol> 
+
+    <p>MongoDB används i en mängd olika applikationer och användningsfall, inklusive webbapplikationer, mobilappar, storskaliga system och IoT-lösningar. Dess flexibilitet och skalbarhet gör det till ett populärt val för utvecklare som behöver lagra och hantera stora mängder data, särskilt när datastrukturen kan vara föränderlig och oförutsägbar över tid.</p>
+</div>
+
+<%- include("template/footer")  %>

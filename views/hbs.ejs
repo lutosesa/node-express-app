@@ -1,0 +1,27 @@
+<%- include("template/header", {webtitle: 'HBS'})  %>
+
+<div class="container my-4 text-success">
+    
+    <h1><%= title %> <span style="font-size: 12px;">(title)</span></h1>
+
+    <p style="font-size: 12px;"><%= description %> (description)</p>
+    <hr > 
+
+    <p>HBS, eller "Handlebars," är en JavaScript-mallmotor som används för att generera dynamisk HTML och andra dokumentbaserade format i webbutveckling. Handlebars är känd för sin enkelhet och effektivitet när det gäller att skapa dynamiska webbsidor och e-postmallar.</p>
+
+    <p>Här är några viktiga egenskaper och koncept i Handlebars:</p>
+
+    <ol>
+        <li><b>Logiklös: </b>En viktig aspekt av Handlebars är att det är logiklöst. Det betyder att det inte har inbyggda funktioner för att hantera komplexa kontrollflöden eller villkor. Istället fokuserar Handlebars på att vara en så ren och enkel mallmotor som möjligt. Logiken hanteras bäst i koden som genererar datan och använder sedan Handlebars för att rendera det.</li>
+
+        <li><b>Uttryck och delar: </b> Handlebars använder uttryck (expressions) som omsluts av dubbla måsvingar {{ }}. Dessa uttryck ersätts med faktiska datavärden när mallen renderas. Du kan också använda delar (partials) för att återanvända kodblock inom dina mallar.</li>
+
+        <li><b>Iterering och villkor: </b> Även om Handlebars inte har komplex logik inbyggd, kan du fortfarande använda uttryck för att iterera över listor och inkludera villkor för att kontrollera om något ska visas eller inte.</li>
+
+        <li><b>För-inkludering och inkapsling: </b> Handlebars stöder möjligheten att inkludera andra mallar inuti dina mallar och inkapsla dem. Detta gör det enkelt att bryta upp komplexa användargränssnitt i mindre och mer hanterbara delar.</li>
+    </ol> 
+
+    <p>Handlebars är ofta användbar i situationer där du vill generera HTML eller andra dokumentbaserade format från dynamisk data, såsom i webbapplikationer eller e-postmallar. Det kan användas tillsammans med olika ramverk och plattformar och är särskilt populärt i Node.js-miljöer. Du kan använda Handlebars med hjälp av Node.js-paket som "express-handlebars" om du bygger en webbapplikation med Express.js som serverramverk.</p>
+</div>
+
+<%- include("template/footer")  %>

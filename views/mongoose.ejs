@@ -1,0 +1,33 @@
+<%- include("template/header", {webtitle: 'Mongoose'})  %>
+
+<div class="container my-4 text-success">
+    
+    <h1><%= title %> <span style="font-size: 12px;">(title)</span></h1>
+
+    <p style="font-size: 12px;"><%= description %> (description)</p>
+    <hr > 
+
+    <p>Mongoose är en elegant JavaScript-ramverk och objektdatabaskoppling (ODM) som används med Node.js och MongoDB. Det är en abstraktionsskikt ovanpå MongoDB som gör det enklare att hantera och interagera med en MongoDB-databas när du utvecklar Node.js-applikationer. Mongoose förenklar hanteringen av MongoDB-dokument och ger dig en snygg sätt att definiera databasmodeller, scheman och utföra åtgärder som att skapa, hämta, uppdatera och ta bort data.</p>
+
+    <p>Här är några nyckelkoncept och funktioner i Mongoose:</p>
+
+    <ol>
+        <li><b>Schema-definition: </b> Du kan använda Mongoose för att definiera dina MongoDB-scheman i form av JavaScript-objekt. Detta gör det enkelt att definiera datatyper, valideringsregler och andra egenskaper för dina dokument.</li>
+
+        <li><b>Modeller: </b> Modeller i Mongoose är JavaScript-objekt som kopplar till en specifik databascollection och definierar egenskaper och metoder som ska användas med dokumenten i den collectionen.</li>
+
+        <li><b>Validering: </b> Mongoose erbjuder inbyggd validering som gör det möjligt att fastställa regler för datavalidering när du skapar, uppdaterar eller tar bort dokument.</li>
+
+        <li><b>Querying: </b>Mongoose erbjuder en mängd metoder för att utföra frågor mot MongoDB-databasen, inklusive sökning, sortering och filtrering av data.</li>
+
+         <li><b>Middleware: </b> Du kan använda middleware-funktioner för att infoga logik före eller efter att åtgärder utförs på databasen, som att validera eller bearbeta data.</li>
+
+         <li><b>Populering: </b>Mongoose gör det enkelt att fylla i data från andra collectioner för att samla in mer information när du hämtar dokument.</li>
+
+         <li><b>Referenser: </b> Mongoose erbjuder stöd för att hantera relationer mellan dokument, inklusive att använda referenser till dokument i andra collectioner.</li>
+    </ol> 
+
+    <p>Mongoose är mycket användbart när du arbetar med MongoDB i Node.js-applikationer, särskilt när du behöver definiera och hantera databasscheman och utföra komplexa frågor. Det gör det också möjligt att använda alla fördelar som MongoDB erbjuder med flexibilitet och skalbarhet samtidigt som du har en mer bekväm och kraftfull sätt att interagera med databasen från din Node.js-kod.</p>
+</div>
+
+<%- include("template/footer")  %>

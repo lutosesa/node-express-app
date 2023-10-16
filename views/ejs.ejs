@@ -1,0 +1,36 @@
+<%- include("template/header", {webtitle: 'EJS'})  %>
+
+<div class="container my-4 text-success">
+    
+    <h1><%= title %> <span style="font-size: 12px;">(title)</span></h1>
+
+    <p style="font-size: 12px;"><%= description %> (description)</p>
+    <hr > 
+
+    <p>EJS står för "Embedded JavaScript" och är en populär mallmotor för webbutveckling som används tillsammans med server-sidig JavaScript, särskilt i Node.js-applikationer. EJS gör det möjligt att skapa dynamiska HTML-sidor genom att bädda in JavaScript-kod direkt i dina HTML-templat, vilket ger dig möjlighet att generera dynamiskt innehåll baserat på data och variabler.</p>
+
+    <p>Några av de viktigaste egenskaperna hos EJS inkluderar:</p>
+
+    <ol>
+        <li><b>Inbäddad JavaScript: </b> EJS låter dig använda vanlig JavaScript inuti dina mallar. Du kan inkludera loopar, villkor, funktioner och variabler direkt i ditt HTML, vilket gör det enkelt att generera dynamiskt innehåll.</li>
+
+        <li><b>Variabler: </b> Du kan infoga variabler och datavärden i dina mallar med hjälp av EJS-syntax. Till exempel kan du infoga användarens namn eller produktnamn i dina mallar baserat på data från din applikation.</li>
+
+        <li><b>Återanvändning: </b> EJS stöder återanvändning av kod och layouter. Du kan skapa återanvändbara komponenter och layouter för att bygga upp dina sidor på ett strukturerat sätt.</li>
+
+        <li><b>Kontrollstrukturer: </b> EJS erbjuder kontrollstrukturer som if, for, och each för att underlätta beslut och iteration i dina mallar.</li>
+
+         <li><b>Modularitet: </b> Du kan använda partials (delar av mallar) för att bryta upp dina sidor i mindre, hanterbara bitar och inkludera dem i olika delar av dina sidor.</li>
+    </ol> 
+
+    <p>För att använda EJS i en Node.js-applikation, måste du installera EJS-paketet via npm och konfigurera din Express-applikation för att använda EJS som visningsmotor. Därefter kan du skapa EJS-mallar och rendera dem med data i dina rutter för att generera dynamiska HTML-sidor.</p>
+    
+    <img src="img/code.png" 
+        class="img-fluid rounded mx-auto d-block mb-3" 
+        width="550rem"
+        alt="">
+
+    <p>I exemplet ovan används <b><%= text %></b> för att bädda in variabler i HTML-sidan, och du kan dynamiskt ändra pageTitle och username när du renderar mallen med data från din Node.js-applikation.</p>
+</div>
+
+<%- include("template/footer")  %>

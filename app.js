@@ -31,12 +31,49 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/service', (req, res) => {
-    res.render('service', { 
+app.get('/express', (req, res) => {
+    res.render('express', { 
         title: 'Vad är Express.js?',
-        description: 'Detta är en dynamisk beskriving från service.ejs filen' 
+        description: 'Detta är en dynamisk beskriving från express.ejs filen' 
     });
 });
+
+app.get('/ejs', (req, res) => {
+    res.render('ejs', {
+        title: 'Vad är EJS?',
+        description: 'Detta är en dynamisk beskriving från ejs.ejs filen',
+        text: '<%= %>',
+    });
+});
+
+app.get('/hbs', (req, res) => {
+    res.render('hbs', {
+        title: 'Vad är HBS?',
+        description: 'Detta är en dynamisk beskriving från hbs.ejs filen'
+    });
+});
+
+app.get('/mongodb', (req, res) => {
+    res.render('mongodb', {
+        title: 'Vad är MongoDB?',
+        description: 'Detta är en dynamisk beskriving från mongodb.ejs filen',
+    });
+});
+
+app.get('/mongoose', (req, res) => {
+    res.render('mongoose', {
+        title: 'Vad är Mongoose?',
+        description: 'Detta är en dynamisk beskriving från mongoose.ejs filen',
+    });
+});
+
+app.get('/jwt', (req, res) => {
+    res.render('jwt', {
+        title: 'Vad är JWT?',
+        description: 'Detta är en dynamisk beskriving från jwt.ejs filen',
+    });
+});
+
 
 
 app.use((req, res, next) => {
