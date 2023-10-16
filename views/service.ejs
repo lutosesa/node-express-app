@@ -1,0 +1,28 @@
+<%- include("template/header", {webtitle: 'Service'})  %>
+
+<div class="container mt-2 text-success">
+    <h1><%= title %> <span style="font-size: 12px;">(title)</span></h1>
+
+    <p style="font-size: 12px;"><%= description %></p>
+    <hr >
+
+    <p>Express.js, ofta kallat bara "Express," är en populär och minimalistisk webbapplikationsramverk för Node.js. Det är utformat för att förenkla processen att bygga webbapplikationer och API:er med Node.js genom att tillhandahålla ett enkelt och kraftfullt sätt att hantera webbrutter, hantera begäranden och svara med svar.</p>
+
+    <p>Här är några viktiga egenskaper och fördelar med Express.js:</p>
+
+    <ol>
+        <li><b>Enkelt och minimalistiskt: </b> Express är känt för sin enkelhet och lätthet att komma igång med. Det erbjuder en grundläggande struktur för att bygga webbapplikationer, men du har frihet att utöka den med tredjepartsmoduler efter behov.</li>
+
+        <li><b>Routning: </b> Express möjliggör enkel hantering av rutter (routes) och URL-mönster. Du kan definiera hur din applikation ska svara på olika URL-begäranden, och Express dirigerar begäranden till de rätta rutterna.</li>
+
+        <li><b>Middleware: </b> Middleware i Express är ett kraftfullt koncept som låter dig utföra åtgärder före eller efter att en begäran når din hanterare. Det gör det enkelt att implementera funktioner som autentisering, loggning, hantering av begärande/kroppsinnehåll och mycket mer.</li>
+
+        <li><b>Tillgång till Node.js-ekosystemet: </b> Express är kompatibelt med Node.js och kan enkelt integreras med andra Node.js-moduler och paket. Dessutom har det ett brett ekosystem av tredjepartsmoduler tillgängliga via npm, vilket kan användas för att lägga till funktionalitet i din Express-applikation.</li>
+
+         <li><b>Prestanda: </b> Express är känt för sin höga prestanda eftersom det bygger på Node.js och dra nytta av dess icke-blockerande, händelsedrivna natur.</li>
+    </ol> 
+
+    <p>Express används ofta för att bygga webbplatser och API:er, särskilt när utvecklare behöver snabbt skapa robusta och skalbara webbapplikationer. Dess enkelhet och flexibilitet gör det till ett populärt val för webbutvecklare som använder Node.js-plattformen.</p>
+</div>
+
+<%- include("template/footer")  %>
