@@ -1,0 +1,29 @@
+<%- include("template/header", {webtitle: 'Body Parse'})  %>
+
+<div class="container my-4 text-success">
+    
+    <h1><%= title %> <span style="font-size: 12px;">(title)</span></h1>
+
+    <p style="font-size: 12px;"><%= description %> (description)</p>
+    <hr > 
+
+    <p>'<b>body-parser</b>' är en Node.js-mellansoftware (middleware) som används för att hantera inkommande data i HTTP-förfrågningar. Den främsta uppgiften för '<b>body-parser</b>' är att analysera data från begäran, som ofta finns i form av <b>JSON-</b> eller <b>url-kodad</b> data, och göra den tillgänglig i en lättanvändbar form i dina Express.js-rutter eller annan Node.js-webbserver.</p>
+
+    <p>När en klient, till exempel en webbläsare, skickar data till en server via en HTTP POST-förfrågan, kommer den data som skickas ofta i kroppen (body) av förfrågan. '<b>body-parser</b>' hjälper till att parsa (analysera) den här kroppen och göra datan tillgänglig som en JavaScript-objekt som kan användas i dina Express.js-rutter.</p>
+
+    <h4>Exempel på hur du kan använda '<b>body-parser</b>' i en Express.js-applikation:</h4>
+
+    <p class="clearfix">
+        <img src="img/body-parser.png" 
+             class="img-fluid rounded float-start mt-3" 
+             width="550rem"
+             alt="">
+    </p>
+
+    <p>I exemplet ovan har '<b>body-parser</b>' installerats och konfigurerats att parsa JSON-data. När en POST-förfrågan görs till sökvägen '/api/data', parsar '<b>body-parser</b>' JSON-datan från kroppen av förfrågan och gör den tillgänglig i '<b>req.body</b>'  i routen. Detta gör det enkelt att hantera och använda POST-data i din Express.js-applikation.</p>
+
+    <p>'<b>body-parser</b>' kan också användas för att parsa andra typer av data, som URL-kodade data (application/x-www-form-urlencoded) och andra format. Det ger en standardiserad och bekväm metod för att hantera inkommande data i Node.js-webbapplikation er. Observera att från och med Express 4.16.0 har '<b>express.json()</b>'  och '<b>express.urlencoded()</b>' inbyggda alternativ som ersätter '<b>body-parser</b>', vilket gör det ännu enklare att hantera kroppen på inkommande förfrågningar.</p>
+
+</div>
+
+<%- include("template/footer")  %>

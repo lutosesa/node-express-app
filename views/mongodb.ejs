@@ -24,6 +24,53 @@
     </ol> 
 
     <p>MongoDB används i en mängd olika applikationer och användningsfall, inklusive webbapplikationer, mobilappar, storskaliga system och IoT-lösningar. Dess flexibilitet och skalbarhet gör det till ett populärt val för utvecklare som behöver lagra och hantera stora mängder data, särskilt när datastrukturen kan vara föränderlig och oförutsägbar över tid.</p>
+
+    <h4>Exempel på hur du kan använda MongoDB med Node.js för att skapa och interagera med en enkel databas</h4>
+
+    <p>För att komma igång behöver du se till att du har MongoDB installerat på din dator eller använda en molnbaserad tjänst som MongoDB Atlas. Du behöver också installera MongoDB-drivrutinen för Node.js, som vanligtvis kallas "<b>mongoose</b>".</p>
+
+    <ol>
+        <li>Installera Mongoose:<br>För att installera Mongoose kan du använda npm (Node Package Manager) genom att köra följande kommando i din terminal:</li>
+            <p class="clearfix">
+                <img src="img/mongodb1.png" 
+                    class="img-fluid rounded float-start mt-3" 
+                    width="550rem"
+                    alt="">
+            </p>
+
+        <li>Anslut till din MongoDB-databas och definiera ett MongoDB-dokumentschema i din Node.js-applikation. Här är ett exempel:</li>
+            <p class="clearfix">
+                <img src="img/mongodb2.png" 
+                    class="img-fluid rounded float-start mt-3" 
+                    width="550rem"
+                    alt="">
+            </p>
+
+            <p>I exemplet ovan:</p>
+            <ul>
+                <li>Vi använder Mongoose för att ansluta till en lokal MongoDB-databas (byt ut "mongodb://localhost/minDatabas" mot din egen anslutningssträng).</li>
+                <li>Vi definierar ett schema för användardokument med hjälp av Mongoose, inklusive de fält som varje dokument kommer att ha.</li>
+            </ul>
+
+        <li class="mt-3">Skapa, läs, uppdatera och ta bort dokument i databasen. Här är några exempel på hur du kan göra CRUD-operationer med Mongoose:</li>
+            <p class="clearfix">
+                <img src="img/mongodb3.png" 
+                    class="img-fluid rounded float-start mt-3" 
+                    width="550rem"
+                    alt="">
+            </p>
+    </ol>
+
+    <p>I exemplen ovan används Mongoose för att utföra följande operationer:</p>
+
+    <ul>
+        <li>Skapa en ny användare och spara den i databasen.</li>
+        <li>Hämta alla användare i databasen.</li>
+        <li>Uppdatera åldern för en användare.</li>
+        <li>Ta bort en användare från databasen.</li>
+    </ul>
+
+    <p>Detta är en grundläggande introduktion till att använda MongoDB med Node.js och Mongoose. MongoDB är kraftfullt och kan användas för att lagra och hämta olika typer av data, och Mongoose underlättar interaktionen med databasen från din Node.js-applikation.</p>
 </div>
 
 <%- include("template/footer")  %>

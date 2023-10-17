@@ -26,8 +26,22 @@ app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'Vad är Node.js?',
+        title: 'Vad är Webbserverprogrammering?',
         description: 'Detta är en dynamisk beskriving från index.ejs filen',
+    });
+});
+
+app.get('/nodejs', (req, res) => {
+    res.render('nodejs', {
+        title: 'Vad är Node.js?',
+        description: 'Detta är en dynamisk beskriving från nodejs.ejs filen',
+    });
+});
+
+app.get('/http', (req, res) => {
+    res.render('http', {
+        title: 'Vad är HTTP-modulen i Node.js?',
+        description: 'Detta är en dynamisk beskriving från http.ejs filen',
     });
 });
 
@@ -64,6 +78,13 @@ app.get('/mongoose', (req, res) => {
     res.render('mongoose', {
         title: 'Vad är Mongoose?',
         description: 'Detta är en dynamisk beskriving från mongoose.ejs filen',
+    });
+});
+
+app.get('/bodyparser', (req, res) => {
+    res.render('bodyparser', {
+        title: 'Vad är bodyParser?',
+        description: 'Detta är en dynamisk beskriving från bodyparser.ejs filen',
     });
 });
 

@@ -22,6 +22,44 @@
     </ol> 
 
     <p>Handlebars är ofta användbar i situationer där du vill generera HTML eller andra dokumentbaserade format från dynamisk data, såsom i webbapplikationer eller e-postmallar. Det kan användas tillsammans med olika ramverk och plattformar och är särskilt populärt i Node.js-miljöer. Du kan använda Handlebars med hjälp av Node.js-paket som "express-handlebars" om du bygger en webbapplikation med Express.js som serverramverk.</p>
+    
+    <h4>Exempel på hur du kan använda HBS i din Express.js-applikation</h4>
+
+    <ol>
+        <li>Först måste du se till att du har HBS installerat. Du kan göra det med kommandot npm install hbs om du inte redan har gjort det.</li>
+
+        <li>Skapa en mapp som innehåller dina HBS-mallfiler. Låt oss säga att du har en fil med namnet "index.hbs" med följande innehåll:</li>
+
+            <p class="clearfix">
+                <img src="img/hbs.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+            <p  class="text-dark clearfix" style="font-size: smaller;" ><b>Bild:</b> i exemplet ovan används dubbla måsvingar <b>{{ }}</b> för att bädda in variabler i HTML-sidan.</p>
+
+        <li>Skapa din Express.js-applikation och konfigurera HBS som visningsmotor. Här är koden för din Express-applikation:</li>
+
+            <p class="clearfix">
+                <img src="img/hbs-express.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+    </ol>
+
+    <p>I detta exempel:</p>
+
+    <ul>
+        <li>Vi använder <b>app.set('view engine', 'hbs')</b> för att konfigurera HBS som visningsmotorn för Express.js.</li>
+        <li>Vi använder <b>app.set('views', __dirname + '/views')</b> för att ange sökvägen till mappen där HBS-mallarna finns.</li>
+        <li>I vår GET-rutt används <b>res.render()</b> för att rendera HBS-mallen "index.hbs" och passar in data (i det här fallet en titel) i mallen.</li>
+    </ul>
+
+    <p>När du kör din applikation och går till <b>http://localhost:3000</b> i din webbläsare kommer du att se din HBS-mall renderad med den dynamiska datan.</p>
+
+    <p>HBS (Handlebars) erbjuder en enkel och uttrycksfull syntax för att skapa dynamiska mallar och gör det enkelt att generera HTML-baserat på data. Det är användbart för att bygga dynamiska webbsidor och webbapplikationer med Node.js och Express.js.</p>
+
 </div>
 
 <%- include("template/footer")  %>

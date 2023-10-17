@@ -28,6 +28,63 @@
     </ol> 
 
     <p>Mongoose är mycket användbart när du arbetar med MongoDB i Node.js-applikationer, särskilt när du behöver definiera och hantera databasscheman och utföra komplexa frågor. Det gör det också möjligt att använda alla fördelar som MongoDB erbjuder med flexibilitet och skalbarhet samtidigt som du har en mer bekväm och kraftfull sätt att interagera med databasen från din Node.js-kod.</p>
+
+    <h4>Exempel på hur du kan använda Mongoose för att skapa, läsa, uppdatera och ta bort dokument i en MongoDB-databas</h4>
+
+    <ol>
+        <li><b>Installera Mongoose: </b> Om du inte har Mongoose installerat kan du göra det med kommandot <b>npm install mongoose</b>.</li>
+        <li><b>Anslut till din MongoDB-databas: </b> För att använda Mongoose måste du ansluta till din MongoDB-databas. Här är ett exempel på hur du gör det:</li>
+            <p class="clearfix">
+                <img src="img/mongoose1.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+        <li><b>Skapa ett Mongoose-schema: </b> Definiera ett schema som beskriver strukturen för dokumenten i din MongoDB-databas. Här är ett exempel:</li>
+            <p class="clearfix">
+                <img src="img/mongoose2.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+        <li><b>Skapa en Mongoose-modell: </b> Skapa en modell baserad på schemat. Modellen kommer att användas för att utföra CRUD-operationer i databasen. Här är ett exempel:</li>
+            <p class="clearfix">
+                <img src="img/mongoose3.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+        <li><b>Skapa ett nytt dokument (Skapa): </b> Du kan skapa ett nytt dokument och spara det i databasen som följer:</li>
+            <p class="clearfix">
+                <img src="img/mongoose4.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+        <li><b>Hitta dokument (Läsa): </b>Du kan söka efter dokument baserat på olika kriterier. Här är ett exempel som hittar alla användare:</li>
+            <p class="clearfix">
+                <img src="img/mongoose5.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+        <li><b>Uppdatera dokument (Uppdatera): </b>Du kan uppdatera dokument baserat på en sökning. Här är ett exempel som ändrar åldern på användaren "Alice":</li>
+            <p class="clearfix">
+                <img src="img/mongoose6.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+        <li><b>Ta bort dokument (Ta bort): </b>Du kan ta bort dokument baserat på en sökning. Här är ett exempel som tar bort användaren "Alice":</li>
+            <p class="clearfix">
+                <img src="img/mongoose7.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+    </ol>
+
+    <p>Detta är ett grundläggande exempel på hur du kan använda Mongoose med MongoDB för att utföra CRUD-operationer. Mongoose erbjuder även avancerade funktioner som validering, krokars (hooks) och mycket mer för att förenkla hanteringen av din MongoDB-databas.</p>
 </div>
 
 <%- include("template/footer")  %>

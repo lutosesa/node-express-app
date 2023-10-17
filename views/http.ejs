@@ -1,0 +1,35 @@
+<%- include("template/header", {webtitle: 'HTTP-modul'})  %>
+
+<div class="container my-4 text-success">
+    
+    <h1><%= title %> <span style="font-size: 12px;">(title)</span></h1>
+
+    <p style="font-size: 12px;"><%= description %> (description)</p>
+    <hr > 
+
+    <p>I Node.js är HTTP-modulen en inbyggd modul som gör det möjligt att skapa och hantera HTTP-webbserver och klienter. HTTP (Hypertext Transfer Protocol) är det protokoll som används för att överföra webbsidor och andra resurser över internet, och HTTP-modulen i Node.js ger ett enkelt sätt att interagera med HTTP-protokollet.</p>
+
+    <p>Med HTTP-modulen i Node.js kan du göra följande:</p>
+
+    <ol>
+        <li><b>Skapa en HTTP-webbserver: </b> Du kan använda HTTP-modulen för att skapa en HTTP-webbserver som lyssnar på en specifik port och hanterar inkommande HTTP-förfrågningar. Du kan definiera hur servern ska svara på olika URL-sökvägar och HTTP-metoder.</li>
+
+        <li><b>Göra HTTP-förfrågningar: </b> Du kan använda HTTP-modulen för att göra HTTP-förfrågningar till externa webbplatser och webbtjänster som en klient. Det är användbart när du vill hämta data från andra webbplatser eller skicka data till dem.</li>
+    </ol> 
+
+    <p>Här är ett exempel på hur du kan använda HTTP-modulen för att skapa en enkel webbserver i Node.js:</p>
+
+     <p class="clearfix">
+            <img src="img/http.png" 
+            class="img-fluid rounded float-start mt-3" 
+            width="550rem"
+            alt="">
+    </p>
+
+    <p>I exemplet ovan skapas en HTTP-webbserver som svarar på alla inkommande förfrågningar med ett "Hello, världen!"-svar. HTTP-modulen ger dig också möjlighet att definiera mer avancerade beteenden, såsom att hantera olika URL-sökvägar och parametrar i förfrågningar.</p>
+
+    <p>Denna inbyggda HTTP-modul är grundläggande men mycket kraftfull, och det är en viktig byggsten för att skapa webbapplikationer i Node.js. För mer komplexa webbapplikationer används ofta webbserverramverk som <b>Express.js</b>, som bygger på Node.js och förenklar hanteringen av HTTP-förfrågningar och svar.</p>
+
+</div>
+
+<%- include("template/footer")  %>

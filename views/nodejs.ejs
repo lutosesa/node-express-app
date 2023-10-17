@@ -1,0 +1,56 @@
+<%- include("template/header", {webtitle: 'Node.js'})  %>
+
+<div class="container my-4 text-primary">
+
+    <h1><%= title %> <span style="font-size: 12px;">(title)</span></h1>
+
+    <p style="font-size: 12px;"><%= description %> (description)</p>
+    
+    <hr >
+
+    <p>Node.js är en öppen källkods, server-sida plattform byggd på Chrome V8 JavaScript-motorn. Den används för att köra JavaScript-kod på servern och möjliggör att utvecklare skapar skalbara och snabba nätverksapplikationer. Node.js har blivit populärt inom webbutveckling och används ofta för att skapa webbserverapplikationer, API:er och realtidsapplikationer som chattapplikationer, spel och IoT (Internet of Things)-system.</p>
+
+    <p>Några viktiga egenskaper och fördelar med Node.js inkluderar:</p>
+
+    <ol>
+        <li><b>Snabbhet:</b> Node.js är byggt på V8-motorn, som är känd för sin snabbhet. Detta gör det särskilt bra för att hantera stora mängder samtidiga anslutningar.</li>
+
+        <li><b>Enkelhet:</b> Node.js använder JavaScript, vilket många utvecklare redan är bekanta med, särskilt om de har erfarenhet av webbfrontend-utveckling.</li>
+
+        <li><b>Enkel hantering av asynkrona operationer:</b> Node.js är utformat för att vara icke-blockerande, vilket gör det enkelt att hantera asynkrona operationer som filsystemåtkomst och nätverkskommunikation.</li>
+
+        <li><b>Stor samling av moduler och paket:</b> Node.js har ett rikt ekosystem av tredjepartsmoduler och paket tillgängliga via npm (Node Package Manager), vilket gör det enkelt att utöka funktionaliteten i dina applikationer.</li>
+    </ol> 
+
+    <h4>Ett enkelt exempel på en Node.js-applikation</h4>
+
+    <p>Detta är ett exempel som skapar en HTTP-webbserver och svarar med ett "Hello, världen!"-meddelande när någon besöker servern:</p>
+
+    <p class="clearfix">
+        <img src="img/nodejs1.png" 
+             class="img-fluid rounded float-start mt-3" 
+             width="550rem"
+             alt="">
+    </p>
+
+    <p>I detta exempel:</p>
+    <ol>
+        <li>Vi importerar den inbyggda <b>http</b>-modulen, som ger oss möjlighet att skapa en HTTP-server.</li>
+        <li>Vi skapar en HTTP-server som svarar på alla inkommande förfrågningar. När någon besöker servern skickar den tillbaka ett "<b>Hello, världen!</b>"-svar.</li>
+        <li>Vi anger vilken port servern ska lyssna på (i detta fall port 3000).</li>
+        <li>Servern börjar lyssna på den angivna porten, och när den är igång, skrivs ett meddelande ut i konsolen.</li>
+    </ol>
+
+    <p>För att köra denna Node.js-applikation, spara koden i en fil med filändelsen "<b>.js</b>", t.ex. "<b>server.js</b>"S, och kör den med Node.js genom att använda följande kommando i din terminal:</p>
+
+    <p class="clearfix">
+        <img src="img/nodejs2.png" 
+             class="img-fluid rounded float-start mt-3" 
+             width="550rem"
+             alt="">
+    </p>
+
+    <p>När servern är igång, öppna en webbläsare och gå till <b>http://localhost:3000</b>. Du bör se meddelandet "<b>Hello, världen!</b>" som servern svarar med. Detta är ett mycket grundläggande exempel på hur du kan använda Node.js för att skapa en webbserver. Node.js är kraftfullt och används ofta för att bygga mer komplexa webbapplikationer och API:er.</p>
+</div>
+
+<%- include("template/footer")  %>

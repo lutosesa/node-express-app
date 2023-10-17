@@ -7,7 +7,7 @@
     <p style="font-size: 12px;"><%= description %> (description)</p>
     <hr > 
 
-    <p>JWT står för "JSON Web Token" och är en öppen standard (RFC 7519) som definierar ett kompakt och självständigt sätt att representera information mellan två parter i form av JSON-objekt. JWT används främst för att verifiera autenticitet och skicka information mellan en klient och en server, särskilt när det handlar om att bekräfta att en användare är behörig att komma åt vissa resurser eller funktioner i en webbapplikation.</p>
+    <p>JWT står för "JSON Web Token" och är en öppen standard (RFC 7519) som definierar ett kompakt och självständigt sätt att representera information mellan två parter i form av JSON-objekt. JWT används främst för att <b>verifiera autenticitet</b> och skicka information mellan en klient och en server, särskilt när det handlar om att bekräfta att en användare är behörig att komma åt vissa resurser eller funktioner i en webbapplikation.</p>
 
     <p>JWT består av tre delar:</p>
 
@@ -19,9 +19,48 @@
         <li><b>Verify Signature (Signatur): </b> Används för att verifiera att tokenet inte har ändrats på vägen. Signaturen skapas genom att kryptera huvudet och nyttolasten med en hemlig nyckel, och den används för att säkerställa att tokenet är autentisk och inte manipulerat.</li>
     </ol> 
 
-    <p>JWT används ofta för autentisering och auktorisering i webbapplikationer och API:er. När en användare loggar in och autentiseras, genereras ett JWT-token och skickas till klienten. Klienten sparar sedan detta token, och när den gör förfrågningar till API:et eller servern, inkluderar den tokenet i förfrågningen. Servern kan sedan verifiera tokenet genom att dekryptera och kontrollera signaturen och sedan ta beslut om att tillåta eller neka åtkomst till resurser baserat på informationen i tokenet.</p>
+    <p>JWT används ofta för <b>autentisering och auktorisering</b> i webbapplikationer och API:er. När en användare loggar in och autentiseras, genereras ett JWT-token och skickas till klienten. Klienten sparar sedan detta token, och när den gör förfrågningar till API:et eller servern, inkluderar den tokenet i förfrågningen. Servern kan sedan verifiera tokenet genom att dekryptera och kontrollera signaturen och sedan ta beslut om att tillåta eller neka åtkomst till resurser baserat på informationen i tokenet.</p>
 
-    <p>JWT har flera fördelar, inklusive enkelhet, självständighet (eftersom tokenet innehåller all nödvändig information) och skapar en säker och standardiserad metod för att hantera autentisering och auktorisering. Det är därför vanligt i moderna webbapplikationer och API:er, särskilt när det handlar om att bygga säkra och skalbara system.</p>
+    <p>JWT har flera fördelar, inklusive enkelhet, självständighet (eftersom tokenet innehåller all nödvändig information) och skapar en säker och standardiserad metod för att hantera <b>autentisering och auktorisering</b>. Det är därför vanligt i moderna webbapplikationer och API:er, särskilt när det handlar om att bygga säkra och skalbara system.</p>
+
+    <h4>Ett enkelt exempel på hur du kan använda JWT i en Node.js-applikation</h4>
+
+    <ol>
+        <li><b>Installera jsonwebtoken-paketet: </b>För att använda JWT i din Node.js-applikation måste du först installera jsonwebtoken-paketet. Du kan göra det med kommandot <b>npm install jsonwebtoken</b>.</li>
+        <li><b>Konfigurera en hemlig nyckel: </b>Du behöver en hemlig nyckel för att kryptera och dekryptera JWT-token. Här är ett exempel på hur du kan konfigurera den:</li>
+            <p class="clearfix">
+                <img src="img/jwt1.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+        <li><b>Skapa ett JWT-token (Inloggning): </b> När en användare loggar in kan du generera ett JWT-token och skicka det till klienten. Här nedan i exemplet ska token var giligt i en timme:</li>
+            <p class="clearfix">
+                <img src="img/jwt2.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+        <li><b>Skicka token till klienten: </b>Skicka det genererade JWT-token till klienten, vanligtvis som en del av svar efter en lyckad inloggning.</li>
+        <li><b>Verifiera JWT-token (Autentisering): </b>När klienten skickar begäranden till servern, kan du verifiera JWT-token för att autentisera användaren. Här är ett exempel:</li>
+            <p class="clearfix">
+                <img src="img/jwt3.png" 
+                class="img-fluid rounded float-start mt-3" 
+                width="550rem"
+                alt="">
+            </p>
+    </ol>
+
+    <p>I det här exemplet:</p>
+
+    <ul>
+        <li>En användare loggar in, och efter en lyckad inloggning genereras ett JWT-token och skickas till klienten.</li>
+        <li>Klienten inkluderar JWT-token i <b>Authorization</b>-huvudet när den gör en förfrågan till <b>/skyddad-rutt</b>-endpunkt.</li>
+        <li>Servern verifierar JWT-token och kontrollerar användarens giltighet. Om token är ogiltigt eller saknas får användaren en lämplig felmeddelande.</li>
+    </ul>
+
+    <p>Detta är ett enkelt exempel på hur JWT kan användas för autentisering i en Node.js-applikation. Du kan anpassa och bygga vidare på detta exempel beroende på dina behov och krav.</p>
+
 </div>
 
 <%- include("template/footer")  %>

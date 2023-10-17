@@ -1,4 +1,4 @@
-<%- include("template/header", {webtitle: 'Home'})  %>
+<%- include("template/header", {webtitle: 'Start'})  %>
 
 <div class="container my-4 text-primary">
 
@@ -8,19 +8,47 @@
     
     <hr >
 
-    <p>Node.js är en öppen källkods, server-sida plattform byggd på Chrome V8 JavaScript-motorn. Den används för att köra JavaScript-kod på servern och möjliggör att utvecklare skapar skalbara och snabba nätverksapplikationer. Node.js har blivit populärt inom webbutveckling och används ofta för att skapa webbserverapplikationer, API:er och realtidsapplikationer som chattapplikationer, spel och IoT (Internet of Things)-system.</p>
+    <p>Webbserverprogrammering avser utvecklingen av program och skript som kör på en webbserver och möjliggör interaktion med webbapplikationer, databaser och klienter (till exempel webbläsare). Det innefattar skapandet och underhållet av webbapplikationer, webbplatser och API:er, vilket gör det möjligt för användare att få tillgång till och interagera med digitala tjänster över internet.</p>
 
-    <p>Några viktiga egenskaper och fördelar med Node.js inkluderar:</p>
+    <p>Här är några grundläggande aspekter av webbserverprogrammering:</p>
 
     <ol>
-        <li><b>Snabbhet:</b> Node.js är byggt på V8-motorn, som är känd för sin snabbhet. Detta gör det särskilt bra för att hantera stora mängder samtidiga anslutningar.</li>
+        <li><b>Webbserver: </b> En webbserver är programvaran som körs på en fysisk eller virtuell server och svarar på inkommande HTTP-förfrågningar från klienter, såsom webbläsare. Det inkluderar hanteringen av begäranden för webbresurser, som HTML-sidor, bilder, JavaScript-filer och andra filer.</li>
 
-        <li><b>Enkelhet:</b> Node.js använder JavaScript, vilket många utvecklare redan är bekanta med, särskilt om de har erfarenhet av webbfrontend-utveckling.</li>
+        <li><b>Serverramverk: </b> Många webbserverprogrammerare använder serverramverk, som Express.js för Node.js, Ruby on Rails för Ruby, Django för Python och många andra, för att förenkla och påskynda utvecklingen av webbapplikationer. Serverramverk erbjuder ofta fördefinierade strukturer och funktioner för att hantera routing, autentisering, databashantering och andra vanliga uppgifter.</li>
 
-        <li><b>Enkel hantering av asynkrona operationer:</b> Node.js är utformat för att vara icke-blockerande, vilket gör det enkelt att hantera asynkrona operationer som filsystemåtkomst och nätverkskommunikation.</li>
+        <li><b>Webbapplikationer: </b> Webbserverprogrammering handlar ofta om att skapa och underhålla webbapplikationer som kan vara allt från enkla webbplatser och bloggar till komplexa e-handelsplattformar, sociala nätverk, och företagsapplikationer. Dessa applikationer använder webbtekniker som HTML, CSS, JavaScript och server-sidig kod för att leverera dynamiskt innehåll till användarna.</li>
 
-        <li><b>Stor samling av moduler och paket:</b> Node.js har ett rikt ekosystem av tredjepartsmoduler och paket tillgängliga via npm (Node Package Manager), vilket gör det enkelt att utöka funktionaliteten i dina applikationer.</li>
+        <li><b>Databashantering: </b>Många webbapplikationer är beroende av databaser för att lagra och hämta data. Webbserverprogrammering omfattar också hantering av databaser, inklusive att skapa tabeller, utföra frågor och uppdatera data.</li>
+
+        <li><b>API-utveckling: </b>API:er (Application Programming Interfaces) används för att möjliggöra kommunikation och datadelning mellan olika applikationer och system. Webbserverprogrammering inkluderar ofta utvecklingen av API:er för att ge externa klienter (till exempel mobilappar) tillgång till data och tjänster.</li>
+
+        <li><b>Säkerhet: </b>Eftersom webbapplikationer är exponerade för internet är säkerhet en avgörande aspekt av webbserverprogrammering. Det innefattar hantering av autentisering, auktorisering, skydd mot skadliga attacker och säker hantering av användardata.</li>
+
+        <li><b>Optimering och prestanda: </b>Webbserverprogrammering handlar också om att optimera prestanda för att säkerställa snabba och responsiva webbapplikationer. Det inkluderar cachehantering, minimering av HTTP-begäranden och optimering av databasåtkomst.</li>
     </ol> 
+
+    <p>Webbserverprogrammering är en bred disciplin som kräver en mångfald av färdigheter, inklusive kunskap om olika programmeringsspråk, databashanteringssystem och säkerhetsprinciper. Det är en grundläggande komponent i webbutveckling och möjliggör de flesta av de digitala tjänster och webbapplikationer som används dagligen på internet.</p>
+
+    <h4>Diagrammet över klient-server ska föreställa en skol-webbplats</h4>
+    
+    <p class="clearfix">
+        <img src="img/client-server.png" 
+            class="img-fluid rounded float-start" 
+            width="750rem"
+            alt="">
+    </p>
+    <ol>
+        <li>Webbläsaren skapar en <b>HTTP-GET</b>-förfrågan till servern med hjälp av URL:n (webbadressen). Vi tar som exempel här att en GET-begäran används eftersom begäran ska bara hämta data (inte ändra data).</li>
+        <li>Webbservern upptäcker att begäran är "<b>dynamisk</b>" och vidarebefordrar den till webbapplikationen för bearbetning ( webbservern bestämmer hur olika URL:er ska hanteras baserat på mönstermatchningsregler definierade i dess konfiguration).</li>
+        <li>Webbapplikationen identifierar att avsikten med begäran baserat på URL:en är att få "en elev-betyg-lista för ett visst ämne". Webbapplikationen får sedan den nödvändiga informationen från databasen med hjälp av ytterligare "interna" parametrar för att definiera vilka elever som går på det begärda ämnet, och eventuellt också få identiteten för den inloggade läraren från en cookie på klientsidan.</li>
+        <li>Webbapplikationen skapar dynamiskt en HTML-sida genom att placera data från databasen i platshållare i en HTML-mall.</li>
+        <li>Webbapplikationen returnerar den genererade HTML-koden till webbläsaren via webbservern, tillsammans med en HTTP-statuskod på 200 ("success"). Om något hindrar HTML från att returneras kommer webbapplikationen att returnera en annan kod - till exempel "404" för att indikera att ämnet eller något annat inte finns.</li>
+        <li>Webbläsaren börjar sedan bearbeta den returnerade HTML-koden och skickar separata förfrågningar om att få andra CSS- eller JavaScript-filer som den refererar till (se steg 7).</li>
+        <li>Webbservern laddar statiska filer från filsystemet och returnerar dem till webbläsaren direkt (återigen, korrekt filhantering baseras på konfigurationsregler och URL-mönstermatchning).</li>
+    </ol>
+    <p>En operation för att uppdatera en post i databasen skulle hanteras på liknande sätt, förutom att som vilken databasuppdatering som helst, bör HTTP-begäran från webbläsaren kodas som en <b>POST</b>-begäran.</p>
+
 </div>
 
 <%- include("template/footer")  %>

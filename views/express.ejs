@@ -24,6 +24,43 @@
     </ol> 
 
     <p>Express används ofta för att bygga webbplatser och API:er, särskilt när utvecklare behöver snabbt skapa robusta och skalbara webbapplikationer. Dess enkelhet och flexibilitet gör det till ett populärt val för webbutvecklare som använder Node.js-plattformen.</p>
+
+    <h3>Ett enkelt exempel på Express.js</h3>
+
+    <p>Här nedan är ett enkelt exempel på hur du kan använda Express.js för att skapa en grundläggande webbserver och definiera några rutter:</p>
+
+    <p>Först måste du se till att du har Express.js installerat. Du kan göra det med kommandot '<b>npm install express</b>'.</p>
+
+    <p class="clearfix">
+        <img src="img/express.png" 
+        class="img-fluid rounded float-start mt-3" 
+        width="550rem"
+        alt="">
+    </p>
+
+    <p>I det här exemplet:</p>
+
+    <ol>
+        <li>Vi importerar Express.js och skapar en Express-app med <b>express()</b>.</li>
+
+        <li>Vi konfigurerar en enkel middleware med '<b>app.use(express.json())</b>' för att analysera inkommande JSON-data i förfrågningar.</li>
+
+        <li>Vi definierar två rutter:</li>
+
+            <ul>
+                <li>En GET-rutt för rotvägen ("/") som skickar tillbaka en hälsning när webbläsaren besöker webbplatsen.</li>
+
+                <li>En POST-rutt för sökvägen "/data" som tar emot JSON-data från inkommande förfrågningar och skickar det tillbaka som JSON-svar.</li>
+            </ul> 
+
+         <li>Vi startar servern och låter den lyssna på port 3000. När servern är aktiv, skriver den ut ett meddelande i konsolen.</li>
+    </ol> 
+
+    <p>När du kör denna kod och går till '<b>http://localhost:3000</b>' i din webbläsare, kommer du att se hälsningsmeddelandet. Du kan också använda verktyg som Postman eller curl för att göra en POST-förfrågan till '<b>http://localhost:3000/data</b>' och skicka JSON-data till servern.</p>
+
+    <p>Detta är bara ett mycket grundläggande exempel på hur Express.js kan användas. Express.js är ett kraftfullt webbserverramverk som kan användas för att bygga mer komplexa webbapplikationer med routing, middleware, databashantering och mycket mer.</p>
+
+    
 </div>
 
 <%- include("template/footer")  %>

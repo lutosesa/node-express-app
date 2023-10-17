@@ -1,7 +1,7 @@
 
-<nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
+<nav class="navbar navbar-expand-md bg-dark fixed-top" data-bs-theme="dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">Node JS</a>
+        <a class="navbar-brand" href="/">Webbserverprogrammering</a>
         <button 
             class="navbar-toggler"
             type="button"
@@ -14,28 +14,52 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
             <ul class="navbar-nav ms-md-2 me-auto mb-2 mb-lg-0">
+
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="/">Start</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/express">Express</a>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Node.js
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="/nodejs">NodeJS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/http">HTTP</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/express">Express</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ejs">EJS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/hbs">HBS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/mongodb">MongoDB</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/mongoose">Mongoose</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/bodyparser">BodyParser</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/jwt">JWT</a>
+                        </li>
+
+
+                    </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/ejs">EJS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/hbs">HBS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/mongodb">MongoDB</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/mongoose">Mongoose</a>
-                </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="/jwt">JWT</a>
-                </li>
+
+                
             </ul>
             <form class="d-flex" role="search">
                 <input class="form-control me-2" 

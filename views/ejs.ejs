@@ -7,7 +7,7 @@
     <p style="font-size: 12px;"><%= description %> (description)</p>
     <hr > 
 
-    <p>EJS står för "Embedded JavaScript" och är en populär mallmotor för webbutveckling som används tillsammans med server-sidig JavaScript, särskilt i Node.js-applikationer. EJS gör det möjligt att skapa dynamiska HTML-sidor genom att bädda in JavaScript-kod direkt i dina HTML-templat, vilket ger dig möjlighet att generera dynamiskt innehåll baserat på data och variabler.</p>
+    <p>EJS står för "Embedded JavaScript" och är en populär mallmotor för webbutveckling som används tillsammans med server-sidig JavaScript, särskilt i Node.js-applikationer. EJS gör det möjligt att skapa dynamiska HTML-sidor genom att bädda in JavaScript-kod direkt i dina HTML-template, vilket ger dig möjlighet att generera dynamiskt innehåll baserat på data och variabler.</p>
 
     <p>Några av de viktigaste egenskaperna hos EJS inkluderar:</p>
 
@@ -23,14 +23,44 @@
          <li><b>Modularitet: </b> Du kan använda partials (delar av mallar) för att bryta upp dina sidor i mindre, hanterbara bitar och inkludera dem i olika delar av dina sidor.</li>
     </ol> 
 
-    <p>För att använda EJS i en Node.js-applikation, måste du installera EJS-paketet via npm och konfigurera din Express-applikation för att använda EJS som visningsmotor. Därefter kan du skapa EJS-mallar och rendera dem med data i dina rutter för att generera dynamiska HTML-sidor.</p>
-    
-    <img src="img/code.png" 
-        class="img-fluid rounded mx-auto d-block mb-3" 
-        width="550rem"
-        alt="">
+    <p>För att använda EJS i en Node.js-applikation, måste du installera EJS-paketet via npm med kommandot '<b>npm install ejs</b>' och konfigurera din Express-applikation för att använda EJS som visningsmotor. Därefter kan du skapa EJS-mallar och rendera dem med data i dina rutter för att generera dynamiska HTML-sidor.</p>
 
-    <p>I exemplet ovan används <b><%= text %></b> för att bädda in variabler i HTML-sidan, och du kan dynamiskt ändra pageTitle och username när du renderar mallen med data från din Node.js-applikation.</p>
+    <h4>Exempel på hur du kan använda EJS i din Express.js-applikation</h4>
+    <ol>
+        <li>Skapa en mapp som innehåller dina EJS-mallfiler. Låt oss säga att du har en fil med namnet "index.ejs" med följande innehåll:</li>
+
+        <p class="clearfix">
+            <img src="img/ejs.png" 
+            class="img-fluid rounded float-start mt-3" 
+            width="550rem"
+            alt="">
+        </p>
+        <p  class="text-dark clearfix" style="font-size: smaller;" ><b>Bild:</b> i exemplet ovan används <b><%= text %></b> för att bädda in variabler i HTML-sidan.</p>
+
+        <li>Skapa din Express.js-applikation och konfigurera EJS som visningsmotor. Här är koden för din Express-applikation:</li>
+
+        <p class="clearfix">
+            <img src="img/ejs-express.png" 
+            class="img-fluid rounded float-start mt-3" 
+            width="550rem"
+            alt="">
+        </p>
+        
+    </ol>        
+
+    <p class="clearfix">I detta exempel:</p>
+
+    <ul>
+        <li>Vi använder '<b>app.set('view engine', 'ejs')</b>' för att konfigurera EJS som visningsmotorn för Express.js.</li>
+
+        <li></li>I vår GET-rutt används '<b>res.render()</b>' för att rendera EJS-mallen "index.ejs" och passar in data (i det här fallet en titel) i mallen.
+    </ul>
+
+    <p>När du kör din applikation och går till <b>http://localhost:3000</b> i din webbläsare, kommer du att se din EJS-mall renderad med den dynamiska datan.</p>
+
+    <p>EJS erbjuder kraftfulla möjligheter att generera dynamiskt innehåll baserat på data och gör det enkelt att separera presentationen från logiken i din webbapplikation. Det är användbart för att bygga dynamiska webbsidor och webbapplikationer med Node.js och Express.js.</p>
+
+
 </div>
 
 <%- include("template/footer")  %>
